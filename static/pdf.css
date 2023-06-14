@@ -1,0 +1,55 @@
+
+.input_box{
+  padding: 10px;
+  margin-top: 5%;
+  margin-left:2%;
+  margin-right:2%;
+  border-radius: 5px;
+  margin-bottom: 3%; 
+  border-style: dotted;
+  background: url('../img/icon_3_file_upload-removebg-preview.png'), rgb(245, 245, 245);
+  height:50%;
+  float: center;
+  border-color: #838383;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.input_box.is-dragover {
+  background-color: rgb(209, 11, 11);
+}
+.input_file{
+  float: left;
+  margin: 2% 2%;
+}
+.proceed{
+  background-color: #29c28a;
+  border: none;
+  color: white;
+  padding: 2% 4%;
+  text-decoration: none;
+  margin: 2% 2%;
+  cursor: pointer;
+  float: right;
+}
+
+#api_key_input{
+  display: block;
+  border: 2px solid #ccc;
+  width:50%;
+  padding: 10px;
+  margin:10px auto;
+  border-radius: 5px;
+}
+.error{
+  background: rgb(229, 175, 175);
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
+  border: solid;
+  border-color: #eb6778;
+}
+.input_box.is-dragover {
+  background-color: grey;
+}

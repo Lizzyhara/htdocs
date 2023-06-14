@@ -1,0 +1,84 @@
+.box{
+  margin: 10%;
+  width: 500px;
+  padding: 30px;
+  background: rgb(255, 253, 253);
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  
+}
+h1{
+  text-align: center;
+  color: black;
+}
+h2{
+  text-align: center;
+  margin-bottom: 40px;
+}
+input{
+  display: block;
+  border: 2px solid #ccc;
+  width:95%;
+  padding: 10px;
+  margin:10px auto;
+  border-radius: 5px;
+}
+label{
+  color:#888;
+  font-size:18px;
+  padding:10px;
+}
+button{
+  float: right;
+  background: #3b0237;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: none;
+}
+button:hover{
+  opacity: .7;
+}
+
+.success{
+  background: rgb(66, 201, 106);
+  color: #07813a;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+.playgif{
+  background-image:url('../img/hard_working.gif'); 
+  background-repeat:repeat; 
+  height:40%;
+}
+#right_side{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: left;
+  height: auto;
+  background-color: #f7956e;
+  width: 45%;
+  padding: 2%;
+  float: right;
+}
+#left_side{
+  background-color: #f4ff93;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: left;
+  height: auto;
+  width: 50%;
+  margin-top: 20%;
+  padding: 2%;
+}
+#img-left{
+  float: none;
+  width: 45%;
+}
+#img-right{
+  float: right;
+  width: 45%;
+}
