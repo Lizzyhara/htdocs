@@ -7,6 +7,7 @@ if (
 	<!DOCTYPE html>
 	<html>
 	<!--Homepage-->
+
 	<head>
 		<title> Homepage </title>
 		<link rel="stylesheet" type="text/css" href="../static/home.css">
@@ -23,7 +24,7 @@ if (
 					<div class="nav-links">
 						<ul>
 							<li><a href='to_pdf.php'>PDF KONVERTER</a></li>
-							<li><a href='to_pdf.php'>TODO</a></li>
+							<li><a href='todo.php'>TODO</a></li>
 							<li><a href='change_password.php'>PASSWORT ÄNDERN</a></li>
 							<li><a href='../login.php'>LOGOUT</a></li>
 						</ul>
@@ -48,13 +49,13 @@ if (
 					<p></p>
 					<div id="left_side">
 						<h3>PDF Konverter</h3>
-						<p>Dieses Tool soll dir dabei helfen deine DOXCS Datein einfach zu einen PDF zu konvertieren.</p>
+						<p>Dieses Tool soll dir dabei helfen deine .docxs Datein einfach zu einen PDF zu konvertieren.</p>
 					</div>
 					<img src="../img/toDoimg.png" id="img-right">
 					<div id="left_side" style="background-color:aquamarine;">
 						<h3>ToDo-Liste</h3>
 						<p style="font-weight: normal">Jeder hat manchmal Probleme seine Aufgaben zu ordnen, mit dem Tool
-							ist dies in der Vergangenheit, du kannst all deine Aufgaben notieren.</p>
+							ist dies in der Vergangenheit, du kannst hier all deine Aufgaben notieren.</p>
 					</div>
 				</div>
 		</section>

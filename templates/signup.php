@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <!--register new user-->
+
 <head>
   <title> Sign up </title>
   <link rel="stylesheet" type="text/css" href="../static/login.css?v=<?= time(); ?>">
@@ -21,7 +22,7 @@
         <?php echo $_GET['success']; ?>
       </p>
     <?php } ?>
-      <!--input boxes for user information-->
+    <!--input boxes for user information-->
     <label>Name</label>
     <?php if (isset($_GET['name'])) { ?>
       <input type="text" name="name" placeholder="Name" value="<?php echo $_GET['name']; ?>"><br>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <!--sends a mail with link to change the password-->
+
 <head>
   <title> Reset password </title>
   <link rel="stylesheet" type="text/css" href="../static/login.css?v=<?= time(); ?>">

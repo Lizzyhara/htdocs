@@ -37,7 +37,8 @@ if (
             <h1>ToDo-Liste</h1>
             </br>
             <fieldset>
-              <input type="text" maxlength="70" id="txt" name="txt" placeholder="ToDo Text bis zu 70 Zeichen"><!---text for the todo allows up to 70 characters-->
+              <input type="text" maxlength="70" id="txt" name="txt"
+                placeholder="ToDo Text bis zu 70 Zeichen"><!---text for the todo allows up to 70 characters-->
               <button id="add_btn" type="submit">Hinzugefügen</button>
               </input>
             </fieldset>

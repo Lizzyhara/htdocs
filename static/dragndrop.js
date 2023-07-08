@@ -12,7 +12,7 @@ document.querySelectorAll(".input_file").forEach((inputElement) => {
 		}
 	});
 
-	dropZoneElement.addEventListener("dragover", (e) => {
+	dropZoneElement.addEveFntListener("dragover", (e) => {
 		e.preventDefault();
 		dropZoneElement.classList.add("input--over");
 	});

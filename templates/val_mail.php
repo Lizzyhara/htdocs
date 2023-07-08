@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<!--template for validating mail--> 
+<!--template for validating mail-->
+
 <head>
     <title> Validates mail last setp</title>
     <link rel="stylesheet" type="text/css" href="../static/login.css?v=<?= time(); ?>">
@@ -10,8 +11,8 @@
 
     <form action="../end_val_mail.php" method="post"><!--uses end_val_mail-->
         <input type="hidden" name="token" value="<?php if (isset($_GET['token'])) { //displays, hides token for php useage
-            echo $_GET['token'];
-        } ?>" /><br>
+                echo $_GET['token'];
+            } ?>" /><br>
         <!--checks for errors-->
         <?php if (isset($_GET['error'])) { ?>
             <p class="error">

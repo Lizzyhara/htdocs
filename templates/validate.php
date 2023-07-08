@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <!--template for sending mail to validate-->
+
 <head>
     <title>Validates mail first step</title>
     <link rel="stylesheet" type="text/css" href="../static/login.css?v=<?= time(); ?>">

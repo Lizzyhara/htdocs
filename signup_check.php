@@ -44,7 +44,7 @@ if (isset($_POST['uname']) && isset($_POST['password']) && isset($_POST['name'])
     $pass = md5($pass); //encryption
 
     $sql = "SELECT * FROM login WHERE User ='$uname'"; //SQL request
-    $result0 = mysqli_query($conn, $sql);//query against database
+    $result0 = mysqli_query($conn, $sql); //query against database
     if (mysqli_num_rows($result0) > 0) { //if there is an entry in the database
       header("Location: templates/signup.php?error=Der Benutzername wird bereits verwendet&$user_data");
       exit();

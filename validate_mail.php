@@ -13,11 +13,11 @@ require 'vendor/PHPMailer/PHPMailer/src/SMTP.php';
 
 if (isset($_POST['mail'])) {
 
-    $email = mysqli_real_escape_string($conn, $_POST['mail']);//create a legal SQL string
-    $token = md5(rand());//creation of a token
+    $email = mysqli_real_escape_string($conn, $_POST['mail']); //create a legal SQL string
+    $token = md5(rand()); //creation of a token
 
     $check_email = "SELECT email FROM login WHERE email='$email' LIMIT 1"; //SQL request
-    $check_email_run = mysqli_query($conn, $check_email);//query against database
+    $check_email_run = mysqli_query($conn, $check_email); //query against database
 
     if (mysqli_num_rows($check_email_run) > 0) {
         //fetch needed data
@@ -25,14 +25,14 @@ if (isset($_POST['mail'])) {
         $get_name = $row['Name'];
         $get_email = $row['email'];
         $update_token = "UPDATE login SET token = '$token' WHERE email = '$get_email' LIMIT 1"; //SQL request
-        $update_token_run = mysqli_query($conn, $update_token);//query against database
+        $update_token_run = mysqli_query($conn, $update_token); //query against database
         if ($update_token_run) {
 
             $host = "smtp.gmail.com";
             $port = 587;
             $secure = "tls";
             $username = "liz.wellhausen@gmail.com"; //email is send from, you can use your own email here if needed
-            $password = "qqlhuebattsprzbn";//app password
+            $password = "qqlhuebattsprzbn"; //app password
 
             try {
                 $mailer = new PHPMailer(true);
@@ -47,7 +47,7 @@ if (isset($_POST['mail'])) {
                 $mailer->isHTML(true);
                 $mailer->Body = "<h1>Hey,<h1>
                                 <p>hier ist der Link zum Vaidieren deiner Mail.</p></br>
-                                <a href='localhost/templates/val_mail.php?token=$token&email=$email'>Hier klicken</a>";//message
+                                <a href='localhost/templates/val_mail.php?token=$token&email=$email'>Hier klicken</a>"; //message
                 $mailer->SMTPAuth = true; // enable SMTP authentication
                 $mailer->SMTPSecure = $secure; // sets the prefix to the servier
                 $mailer->Host = $host; // sets GMAIL as the SMTP server

@@ -5,11 +5,13 @@ body {
   height: 100vh;
   flex-direction: column;
   background-color: #32ce8d;
-  
+
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
+
 .header {
   padding: 10px 16px;
   background: #555;
@@ -94,7 +96,7 @@ nav {
   margin-top: 2%;
   position: relative;
   display: inline;
-  height: 75%;
+  height: 75vh;
   width: 70%;
   padding: 30px;
   background: rgb(255, 253, 253);

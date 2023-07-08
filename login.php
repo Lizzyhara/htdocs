@@ -14,7 +14,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
   $uname = validate($_POST['uname']);
   $pass = validate($_POST['password']);
-  $pass = md5($pass);//encryption
+  $pass = md5($pass); //encryption
   //check if all inputs are filled
   if (empty($uname)) {
     header("Location: templates/index.php?error=Benutzername muss eingegeben werden");
@@ -29,7 +29,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
     if (mysqli_num_rows($result) === 1) { //found a user
       $row = mysqli_fetch_assoc($result);
       if ($row['User'] === $uname && $row['Password'] === $pass) { //doublechecks information
-        if ($row['Val'] != 1) {//checks if mail is valid
+        if ($row['Val'] != 1) { //checks if mail is valid
           header("Location: templates/index.php?error=Sie müssen ihre Email noch validieren");
           exit();
         }

@@ -20,10 +20,12 @@
 #toDoBox:nth-child(3n) {
     background-color: rgb(161, 77, 209);
 }
+
 #toDoBox:nth-child(5n) {
     background-color: rgb(159, 167, 50);
 }
-#toDoBox{
+
+#toDoBox {
     width: 96%;
     height: 30%;
     list-style: none;
@@ -33,6 +35,7 @@
     font-size: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 #del_btn {
     margin: 1%;
     background-color: #def37f;
@@ -70,9 +73,11 @@ fieldset {
 #todo_txt_allign {
     width: 90%;
 }
+
 #data::-webkit-scrollbar {
     display: none;
-  }
+}
+
 textarea {
     resize: none;
     margin: 1%;
@@ -83,10 +88,11 @@ textarea {
     text-align: center;
     width: 80%;
     overflow-y: auto;
-    word-wrap:break-word;
+    word-wrap: break-word;
     height: fit-content;
 }
-#data{
+
+#data {
     height: 50vh;
     overflow: auto;
 }

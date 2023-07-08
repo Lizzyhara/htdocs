@@ -2,7 +2,7 @@
 session_start();
 //adds todo to database
 include 'db_conn.php';
-if (!empty($_POST['txt'])) {//checks if input is filled
+if (!empty($_POST['txt'])) { //checks if input is filled
     if (isset($_POST['txt'])) {
         function validate($data)
         {

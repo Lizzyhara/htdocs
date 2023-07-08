@@ -40,7 +40,7 @@ if (isset($_SESSION['User'])) {
                 ID='$id'";
 			$result = mysqli_query($conn, $sql);
 
-			if (mysqli_num_rows($result) === 1) {//user found
+			if (mysqli_num_rows($result) === 1) { //user found
 				//updates password
 				$sql_2 = "UPDATE login
         	          SET Password='$np'

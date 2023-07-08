@@ -4,12 +4,12 @@ include 'db_conn.php';
 //changes password when mail link was requested
 if (isset($_POST['email']) && isset($_POST['new_pass']) && isset($_POST['con_pass'])) { //checks if all inputs are enterd
 
-  $email = mysqli_real_escape_string($conn, $_POST['email']);//create a legal SQL string
-  $new_pass = mysqli_real_escape_string($conn, $_POST['new_pass']);//create a legal SQL string
-  $con_pass = mysqli_real_escape_string($conn, $_POST['con_pass']);//create a legal SQL string
-  $token = mysqli_real_escape_string($conn, $_POST['token']);//create a legal SQL string
+  $email = mysqli_real_escape_string($conn, $_POST['email']); //create a legal SQL string
+  $new_pass = mysqli_real_escape_string($conn, $_POST['new_pass']); //create a legal SQL string
+  $con_pass = mysqli_real_escape_string($conn, $_POST['con_pass']); //create a legal SQL string
+  $token = mysqli_real_escape_string($conn, $_POST['token']); //create a legal SQL string
 
-  if (empty($email)) {//checks if inputs are empty
+  if (empty($email)) { //checks if inputs are empty
     header("Location: templates/change_with_mail.php?token=$token&&email=$email");
     exit();
   } else if (empty($new_pass)) {
@@ -19,7 +19,7 @@ if (isset($_POST['email']) && isset($_POST['new_pass']) && isset($_POST['con_pas
     header("Location: templates/change_with_mail.php?token=$token&&email=$email");
     exit();
   }
-  if (!empty($token)) {//checks if token is entered
+  if (!empty($token)) { //checks if token is entered
     $check_token = "SELECT token FROM login WHERE email = '$email' AND token = '$token'";
     $check_token_run = mysqli_query($conn, $check_token); //query against database
 
@@ -28,7 +28,7 @@ if (isset($_POST['email']) && isset($_POST['new_pass']) && isset($_POST['con_pas
         $pass = md5($new_pass); //encryption
         $update_password = "UPDATE login SET Password = '$pass' WHERE email='$email' AND token = '$token'";
         $update_password_run = mysqli_query($conn, $update_password);
-        if ($update_password_run) {//update was successful
+        if ($update_password_run) { //update was successful
           header("Location: templates/index.php");
           exit(0);
         } else {

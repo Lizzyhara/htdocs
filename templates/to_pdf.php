@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--upload docs files and get the pdf version-->
+
 <head>
     <meta charset="UTF-8">
     <title>dragndrop to PDF</title>
@@ -32,12 +33,12 @@
                         </p>
                     <?php } ?>
                     <!--get your own api key at https://apidocs.pdf.co">https://apidocs.pdf.co-->
-                        <input type="hidden" id="api_key_input" name="apiKey" placeholder="API Key" />
+                    <input type="hidden" id="api_key_input" name="apiKey" placeholder="API Key" />
                     </p>
                     <!--file upload box-->
                     <div class="input_box">
                         <div class="input_box_pmt">Eine Datei ziehen und fallen lassen oder drücken zum Hochladen</div>
-                        
+
                         <input type="hidden" name="MAX_FILE_SIZE" value="8000000" />
                         <input type="file" name="file" class="input_file" hidden>
                     </div>

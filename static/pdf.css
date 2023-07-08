@@ -1,13 +1,13 @@
 .input_box {
   padding: 10px;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: 2%;
   margin-right: 2%;
   border-radius: 5px;
   margin-bottom: 3%;
   border-style: dotted;
   background: url('../img/icon_3_file_upload-removebg-preview.png'), rgb(245, 245, 245);
-  height: 50vh;
+  height: 55vh;
   float: center;
   border-color: #838383;
   background-position: center;

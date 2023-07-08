@@ -1,11 +1,10 @@
 <?php
 include 'db_conn.php';
-if(isset($_SESSION['ID'])){
+if (isset($_SESSION['ID'])) {
     $uid = $_SESSION['ID'];
-}
-else{
-session_start();
-//shows the todos
+} else {
+    session_start();
+    //shows the todos
 }
 $uid = $_SESSION['ID'];
 $sql = "SELECT * FROM todo WHERE UserID = $uid"; //SQL request
@@ -31,6 +30,7 @@ if (mysqli_num_rows($result) > 0) { //if there todo are entriess in the database
                         href="../show.php?del_result=<?php echo $row['ID']; ?>" id="del_btn">Delete</a></p>
             </div>
         </li>
+
         </html>
         <?php
     }

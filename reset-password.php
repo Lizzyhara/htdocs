@@ -15,13 +15,13 @@ require 'vendor/PHPMailer/PHPMailer/src/SMTP.php';
 
 if (isset($_POST['mail'])) {
 
-  $email = mysqli_real_escape_string($conn, $_POST['mail']);//create a legal SQL string
-  $token = md5(rand());//encryption
+  $email = mysqli_real_escape_string($conn, $_POST['mail']); //create a legal SQL string
+  $token = md5(rand()); //encryption
 
-  $check_email = "SELECT email FROM login WHERE email='$email' LIMIT 1";//SQL request
-  $check_email_run = mysqli_query($conn, $check_email);//query against database
+  $check_email = "SELECT email FROM login WHERE email='$email' LIMIT 1"; //SQL request
+  $check_email_run = mysqli_query($conn, $check_email); //query against database
 
-  if (mysqli_num_rows($check_email_run) > 0) {//entry found
+  if (mysqli_num_rows($check_email_run) > 0) { //entry found
     $row = mysqli_fetch_array($check_email_run);
     //email is send to
     $get_name = $row['Name'];
@@ -34,7 +34,7 @@ if (isset($_POST['mail'])) {
       $port = 587;
       $secure = "tls";
       $username = "liz.wellhausen@gmail.com"; //email is send from, you can use your own email here if needed
-      $password = "qqlhuebattsprzbn";//app password
+      $password = "qqlhuebattsprzbn"; //app password
 
       try {
         $mailer = new PHPMailer(true);

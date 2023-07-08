@@ -13,12 +13,14 @@
     // note for files smaller then 200kb
     
     // Get submitted form data
-    $apiKey ="liz@wellhausen.com_3221807834acdc37cef82ac44f451af97a01c0ed34d9a2b61049388a5df60d5b340f5d10"; // The authentication key (API Key). Get your own by registering at https://app.pdf.co
-    
-
+    $apiKey = "liz@wellhausen.com_3221807834acdc37cef82ac44f451af97a01c0ed34d9a2b61049388a5df60d5b340f5d10"; // The authentication key (API Key). Get your own by registering at https://app.pdf.co
+    //Checks if file is uploaded
+    if(empty($_FILES["file"]["tmp_name"])){
+        header("Location: templates/to_pdf.php?error=Keine Datei hochgeladen");
+        exit();
+    }
     // 1. RETRIEVE THE PRESIGNED URL TO UPLOAD THE FILE.
     // * If you already have the direct PDF file link, go to the step 3.
-    
     // Create URL
     $url = "https://api.pdf.co/v1/file/upload/get-presigned-url" .
         "?name=" . urlencode($_FILES["file"]["name"]) .
@@ -31,7 +33,6 @@
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
     // Execute request
     $result = curl_exec($curl);
-
     if (curl_errno($curl) == 0) {
         $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
@@ -71,13 +72,11 @@
                         // Display request error
                         header("Location: templates/to_pdf.php?error= $status_code");
                         exit();
-                        ;
                     }
                 } else {
                     // Display CURL error
                     header("Location: templates/to_pdf.php?error=" . curl_error($curl));
                     exit();
-                    ;
                 }
             } else {
                 // Display service reported error
@@ -89,7 +88,6 @@
     
             header("Location: templates/to_pdf.php?error= $status_code");
             exit();
-            ;
         }
 
         curl_close($curl);
