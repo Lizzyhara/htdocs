@@ -1,3 +1,4 @@
+//function for the drag and drop field in topdf.php
 document.querySelectorAll(".input_file").forEach((inputElement) => {
 	const dropZoneElement = inputElement.closest(".input_box");
 
@@ -13,12 +14,12 @@ document.querySelectorAll(".input_file").forEach((inputElement) => {
 
 	dropZoneElement.addEventListener("dragover", (e) => {
 		e.preventDefault();
-		dropZoneElement.classList.add("drop-zone--over");
+		dropZoneElement.classList.add("input--over");
 	});
 
 	["dragleave", "dragend"].forEach((type) => {
 		dropZoneElement.addEventListener(type, (e) => {
-			dropZoneElement.classList.remove("drop-zone--over");
+			dropZoneElement.classList.remove("input--over");
 		});
 	});
 
@@ -30,6 +31,6 @@ document.querySelectorAll(".input_file").forEach((inputElement) => {
 			updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
 		}
 
-		dropZoneElement.classList.remove("drop-zone--over");
+		dropZoneElement.classList.remove("input--over");
 	});
 });

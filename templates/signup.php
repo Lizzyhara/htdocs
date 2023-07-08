@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <form action="../signup-check.php" method="post">
+  <form action="../signup_check.php" method="post">
     <h2>REGISTRIERUNG</h2>
     <!--checks for errors-->
     <?php if (isset($_GET['error'])) { ?>

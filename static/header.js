@@ -1,4 +1,4 @@
-window.onscroll = function () { myFunction() };
+window.onscroll = function () { myFunction(), scrollFunction()};
 
 var header = document.getElementById("header");
 var sticky = header.offsetTop;
@@ -11,9 +11,9 @@ function myFunction() {
 	}
 }
 function scrollFunction() {
-	if (document.body.scrollTop > 1150 || document.documentElement.scrollTop > 1150) {
-	  header.style.padding = "10px 10px";
+	if (document.body.scrollTop > "50%" || document.documentElement.scrollTop > "50%") {
+	  header.style.padding = "1px 1px";
 	} else {
-	  header.style.padding = "50px 10px";
+		header.classList.remove("sticky");
 	}
 }

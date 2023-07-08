@@ -3,11 +3,10 @@ session_start();
 if (
 	isset($_SESSION['User'])
 ) {
-	
 	?>
 	<!DOCTYPE html>
 	<html>
-
+	<!--Homepage-->
 	<head>
 		<title> Home </title>
 		<link rel="stylesheet" type="text/css" href="../static/home.css">

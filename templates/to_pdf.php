@@ -36,7 +36,7 @@
                     </p>
                     <!--file upload box-->
                     <div class="input_box">
-                        <span class="input_box_pmt">Drop file here or click to upload</span>
+                        <div class="input_box_pmt">Eine Datei ziehen und fallen lassen oder drücken zum Hochladen</div>
                         
                         <input type="hidden" name="MAX_FILE_SIZE" value="8000000" />
                         <input type="file" name="file" class="input_file" hidden>

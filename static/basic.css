@@ -5,8 +5,11 @@ body {
   height: 100vh;
   flex-direction: column;
   background-color: #32ce8d;
+  
 }
-
+body::-webkit-scrollbar {
+  display: none;
+}
 .header {
   padding: 10px 16px;
   background: #555;
@@ -27,7 +30,8 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
-  height: 100vh;
+  margin: 5%;
+  height: 90vh;
   flex-direction: column;
 }
 

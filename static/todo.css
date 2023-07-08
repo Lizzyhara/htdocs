@@ -11,44 +11,21 @@
 
 #toDoBox:nth-child(1n) {
     background-color: rgb(197, 120, 57);
-    width: 90%;
-    height: 20%;
-    margin: 2%;
-    list-style: none;
-    text-align: center;
-    size: contain;
-    font-size: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #toDoBox:nth-child(even) {
     background-color: aqua;
-    width: 90%;
-    height: 20%;
-    list-style: none;
-    margin: 2%;
-    text-align: center;
-    size: contain;
-    font-size: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #toDoBox:nth-child(3n) {
     background-color: rgb(161, 77, 209);
-    width: 90%;
-    height: 20%;
-    list-style: none;
-    margin: 2%;
-    text-align: center;
-    size: contain;
-    font-size: 2rem;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 #toDoBox:nth-child(5n) {
-    background-color: rgb(234, 241, 130);
-    width: 90%;
-    height: 20%;
+    background-color: rgb(159, 167, 50);
+}
+#toDoBox{
+    width: 96%;
+    height: 30%;
     list-style: none;
     margin: 2%;
     text-align: center;
@@ -93,7 +70,9 @@ fieldset {
 #todo_txt_allign {
     width: 90%;
 }
-
+#data::-webkit-scrollbar {
+    display: none;
+  }
 textarea {
     resize: none;
     margin: 1%;
@@ -103,10 +82,11 @@ textarea {
     border: transparent;
     text-align: center;
     width: 80%;
-    overflow: auto;
+    overflow-y: auto;
+    word-wrap:break-word;
     height: fit-content;
 }
 #data{
-    height: 55vh;
+    height: 50vh;
     overflow: auto;
 }

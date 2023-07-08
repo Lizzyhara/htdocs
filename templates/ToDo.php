@@ -12,7 +12,7 @@ if (
   <head>
     <title> Home </title>
     <link rel="stylesheet" type="text/css" href="../static/basic.css">
-    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet"><!--todo font-->
     <link rel="stylesheet" type="text/css" href="../static/todo.css">
     <meta name="viewport" content="with=device-wigth, initial-scale=1.0">
   </head>
