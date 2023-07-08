@@ -49,7 +49,7 @@ if (isset($_POST['email']) && isset($_POST['new_pass']) && isset($_POST['con_pas
   } else {
     //error
     $_SESSION['status'] = "Kein Token verfügbar";
-    header("Location: templates/reset_p.php");
+    header("Location: templates/reset_password.php");
     exit(0);
   }
 

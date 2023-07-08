@@ -31,7 +31,6 @@ if (mysqli_num_rows($result) > 0) { //if there todo are entriess in the database
                         href="../show.php?del_result=<?php echo $row['ID']; ?>" id="del_btn">Delete</a></p>
             </div>
         </li>
-        <script type="text/javascript" src="../static/txtarea.js"></script>
         </html>
         <?php
     }

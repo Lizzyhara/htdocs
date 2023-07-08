@@ -39,7 +39,7 @@
     <input type="mail" name="mail" placeholder="Email" /><br>
     <label>Passwort</label>
     <input type="password" name="password" placeholder="Passwort" /><br>
-    <label>RE_Passwort</label>
+    <label>Bestätige das Passwort</label>
     <input type="password" name="re_password" placeholder="RE_Passwort" /><br>
 
     <button type="submit">Registrieren</button>

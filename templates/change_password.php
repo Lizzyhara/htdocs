@@ -8,7 +8,7 @@ if (isset($_SESSION['User'])) {
 	<html>
 
 	<head>
-		<title>Change Password</title>
+		<title>Change password without mail </title>
 		<link rel="stylesheet" type="text/css" href="../static/login.css">
 		<link rel="stylesheet" type="text/css" href="../static/basic.css">
 	</head>

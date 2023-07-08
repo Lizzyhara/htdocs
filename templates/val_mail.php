@@ -2,7 +2,7 @@
 <html>
 <!--template for validating mail--> 
 <head>
-    <title> Validate Mail </title>
+    <title> Validates mail last setp</title>
     <link rel="stylesheet" type="text/css" href="../static/login.css?v=<?= time(); ?>">
 </head>
 

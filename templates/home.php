@@ -8,7 +8,7 @@ if (
 	<html>
 	<!--Homepage-->
 	<head>
-		<title> Home </title>
+		<title> Homepage </title>
 		<link rel="stylesheet" type="text/css" href="../static/home.css">
 		<link rel="stylesheet" type="text/css" href="../static/basic.css">
 		<meta name="viewport" content="with=device-wigth, initial-scale=1.0">
@@ -58,7 +58,6 @@ if (
 					</div>
 				</div>
 		</section>
-		<script type="text/javascript" src="../static/header.js"></script><!--uses javascript-->
 	</body>
 
 	</html>

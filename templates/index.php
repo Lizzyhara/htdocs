@@ -25,7 +25,7 @@
 
     <button type="submit">Login</button>
     <a href="signup.php" class="ca">Registrieren</a>
-    <a href="reset_p.php" class="ca"> Passwort vergessen? </a>
+    <a href="reset_password.php" class="ca"> Passwort vergessen? </a>
   </form>
 
 </body>

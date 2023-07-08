@@ -2,7 +2,7 @@
 <html>
 <!--change mail with password -->
 <head>
-  <title> Reset Passwort </title>
+  <title> Reset password with mail </title>
   <link rel="stylesheet" type="text/css" href="../static/login.css?v=<?= time(); ?>">
 </head>
 

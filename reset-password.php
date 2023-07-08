@@ -57,22 +57,22 @@ if (isset($_POST['mail'])) {
         $mailer->Username = $username; // GMAIL username
         $mailer->Password = $password; // GMAIL password
         $result = $mailer->Send();
-        echo header("Location: templates/reset_p.php");
+        echo header("Location: templates/reset_password.php");
         exit();
       } catch (Exception $e) {
-        echo header("Location: templates/reset_p.php?error=Email konnte nicht gesendet werden");
+        echo header("Location: templates/reset_password.php?error=Email konnte nicht gesendet werden");
         exit();
       }
     } else {
-      echo header("Location: templates/reset_p.php?error=Etwas ist schief gelaufen");
+      echo header("Location: templates/reset_password.php?error=Etwas ist schief gelaufen");
       exit();
     }
   } else {
-    echo header("Location: templates/reset_p.php?error=Email wurde nicht gefunden");
+    echo header("Location: templates/reset_password.php?error=Email wurde nicht gefunden");
     exit();
   }
 
 } else {
-  echo header("Location: templates/reset_p.php?error=Email muss angegeben werden");
+  echo header("Location: templates/reset_password.php?error=Email muss angegeben werden");
   exit();
 }
