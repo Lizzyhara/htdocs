@@ -1,92 +1,112 @@
-#txt{
+#txt {
     display: block;
     border: 2px solid #ccc;
-    width:30%;
-    padding: 2% 4%;
+    width: 50%;
     border-radius: 5px;
     float: left;
     margin: 2% 2%;
-    padding: 2% 4%;
-    
-  }
-#toDoBox:nth-child(1){
+    padding: 1.5% 4%;
+    font-size: 1.2rem;
+}
+
+#toDoBox:nth-child(1n) {
     background-color: rgb(197, 120, 57);
     width: 90%;
     height: 20%;
-    list-style:none;
     margin: 2%;
+    list-style: none;
     text-align: center;
-    size:contain;
+    size: contain;
     font-size: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#toDoBox:nth-child(even){
+
+#toDoBox:nth-child(even) {
     background-color: aqua;
     width: 90%;
     height: 20%;
-    list-style:none;
+    list-style: none;
     margin: 2%;
     text-align: center;
-    size:contain;
+    size: contain;
     font-size: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#toDoBox:nth-child(3){
+
+#toDoBox:nth-child(3n) {
     background-color: rgb(161, 77, 209);
     width: 90%;
     height: 20%;
-    list-style:none;
+    list-style: none;
     margin: 2%;
     text-align: center;
-    size:contain;
+    size: contain;
     font-size: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#toDoBox:nth-child(5){
+
+#toDoBox:nth-child(5n) {
     background-color: rgb(234, 241, 130);
     width: 90%;
     height: 20%;
-    list-style:none;
+    list-style: none;
     margin: 2%;
     text-align: center;
-    size:contain;
+    size: contain;
     font-size: 2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#del_btn{
+#del_btn {
     margin: 1%;
     background-color: #def37f;
     border: none;
-    color: white;
+    color: rgb(8, 8, 8);
     padding: 0.5% 1%;
     text-decoration: none;
     border-radius: 10px;
     cursor: pointer;
-    float:right;
+    float: right;
     font-size: 50%;
 }
-p{
-    font-family: 'Reenie Beanie';
-    font-size: 2rem;
-}
+
 #add_btn {
     background-color: #0478e4;
-    padding: 1% 2%;
-    margin: 1% 2%;
+    padding: 2% 4%;
+    margin: 1.5% 2%;
     border: none;
     color: white;
     text-decoration: none;
     border-radius: 10px;
     cursor: pointer;
-    float:right;
+    float: right;
+    font-size: 1.2rem;
 }
+
 fieldset {
-    font-size: 1em;
+    font-size: 2rem;
     padding: 0.5em;
     text-align: center;
     border-radius: 1em;
     font-family: sans-serif;
 }
-#todo_txt_allign{
+
+#todo_txt_allign {
     width: 90%;
+}
+
+textarea {
+    resize: none;
+    margin: 1%;
+    font-family: 'Reenie Beanie';
+    font-size: 3rem;
+    background: transparent;
+    border: transparent;
+    text-align: center;
+    width: 80%;
+    overflow: auto;
+    height: fit-content;
+}
+#data{
+    height: 55vh;
+    overflow: auto;
 }

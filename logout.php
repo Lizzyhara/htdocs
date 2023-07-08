@@ -1,4 +1,5 @@
-<?php 
+<?php
+//ends session and returns to index.php
 session_start();
 
 session_unset();

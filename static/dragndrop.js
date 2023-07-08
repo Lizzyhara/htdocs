@@ -1,38 +1,35 @@
-const box = document.querySelector('.input_box');
-        const fileInput = document.querySelector('[name="files[]"');
-        const selectButton = document.querySelector('label strong');
-        const fileList = document.querySelector('.file-list');
+document.querySelectorAll(".input_file").forEach((inputElement) => {
+	const dropZoneElement = inputElement.closest(".input_box");
 
-        let droppedFiles = [];
+	dropZoneElement.addEventListener("click", (e) => {
+		inputElement.click();
+	});
 
-        [ 'drag', 'dragstart', 'dragend', 'dragover', 'dragenter', 'dragleave', 'drop' ].forEach( event => box.addEventListener(event, function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-        }), false );
+	inputElement.addEventListener("change", (e) => {
+		if (inputElement.files.length) {
+			updateThumbnail(dropZoneElement, inputElement.files[0]);
+		}
+	});
 
-        [ 'dragover', 'dragenter' ].forEach( event => box.addEventListener(event, function(e) {
-            box.classList.add('is-dragover');
-        }), false );
+	dropZoneElement.addEventListener("dragover", (e) => {
+		e.preventDefault();
+		dropZoneElement.classList.add("drop-zone--over");
+	});
 
-        [ 'dragleave', 'dragend', 'drop' ].forEach( event => box.addEventListener(event, function(e) {
-            box.classList.remove('is-dragover');
-        }), false );
+	["dragleave", "dragend"].forEach((type) => {
+		dropZoneElement.addEventListener(type, (e) => {
+			dropZoneElement.classList.remove("drop-zone--over");
+		});
+	});
 
-        box.addEventListener('drop', function(e) {
-            droppedFiles = e.dataTransfer.files;
-            fileInput.files = droppedFiles;
-            updateFileList();
-        }, false );
+	dropZoneElement.addEventListener("drop", (e) => {
+		e.preventDefault();
 
-        fileInput.addEventListener( 'change', updateFileList );
+		if (e.dataTransfer.files.length) {
+			inputElement.files = e.dataTransfer.files;
+			updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+		}
 
-        function updateFileList() {
-            const filesArray = Array.from(fileInput.files);
-            if (filesArray.length > 1) {
-                fileList.innerHTML = '<p>Selected files:</p><ul><li>' + filesArray.map(f => f.name).join('</li><li>') + '</li></ul>';
-            } else if (filesArray.length == 1) {
-                fileList.innerHTML = `<p>Selected file: ${filesArray[0].name}</p>`;
-            } else {
-                fileList.innerHTML = '';
-            }
-        }
+		dropZoneElement.classList.remove("drop-zone--over");
+	});
+});
