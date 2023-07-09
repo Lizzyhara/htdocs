@@ -10,8 +10,8 @@ if (
 
 	<head>
 		<title> Homepage </title>
-		<link rel="stylesheet" type="text/css" href="../static/home.css">
-		<link rel="stylesheet" type="text/css" href="../static/basic.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/home.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/basic.css">
 		<meta name="viewport" content="with=device-wigth, initial-scale=1.0">
 	</head>
 
@@ -26,7 +26,7 @@ if (
 							<li><a href='to_pdf.php'>PDF KONVERTER</a></li>
 							<li><a href='todo.php'>TODO</a></li>
 							<li><a href='change_password.php'>PASSWORT ÄNDERN</a></li>
-							<li><a href='../login.php'>LOGOUT</a></li>
+							<li><a href='../php/login.php'>LOGOUT</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -45,13 +45,13 @@ if (
 						<p>Diese Seite soll dir bei Altagsproblemen zur Seite stehen. Du kannst hier sowohl aufschreiben was
 							du noch zu erledigen hast, als auch ein .docxs Dokument in ein PDF umzuwandeln.</p>
 					</div>
-					<img src="../img/x_to_pdf.png" id="img-left">
+					<img src="../static/img/x_to_pdf.png" id="img-left">
 					<p></p>
 					<div id="left_side">
 						<h3>PDF Konverter</h3>
 						<p>Dieses Tool soll dir dabei helfen deine .docxs Datein einfach zu einen PDF zu konvertieren.</p>
 					</div>
-					<img src="../img/toDoimg.png" id="img-right">
+					<img src="../static/img/toDoimg.png" id="img-right">
 					<div id="left_side" style="background-color:aquamarine;">
 						<h3>ToDo-Liste</h3>
 						<p style="font-weight: normal">Jeder hat manchmal Probleme seine Aufgaben zu ordnen, mit dem Tool

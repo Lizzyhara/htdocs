@@ -9,8 +9,8 @@ if (isset($_SESSION['User'])) {
 
 	<head>
 		<title>Change password without mail </title>
-		<link rel="stylesheet" type="text/css" href="../static/login.css">
-		<link rel="stylesheet" type="text/css" href="../static/basic.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/login.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/basic.css">
 	</head>
 
 	<body>
@@ -22,13 +22,13 @@ if (isset($_SESSION['User'])) {
 							<li><a href='home.php'>HOME</a></li>
 							<li><a href='todo.php'>TODO</a></li>
 							<li><a href='change_password.php'>PASSWORT ÄNDERN</a></li>
-							<li><a href='../login.php'>LOGOUT</a></li>
+							<li><a href='../php/login.php'>LOGOUT</a></li>
 						</ul>
 					</div>
 				</nav>
 			</div>
 			<div class="center">
-				<form action="..\change_p.php" method="post"><!--uses change_p.php-->
+				<form action="..\php\change_p.php" method="post"><!--uses change_p.php-->
 					<h2>Passwort ändern</h2><!--displays errors-->
 					<?php if (isset($_GET['error'])) { ?>
 						<p class="error">
@@ -51,7 +51,6 @@ if (isset($_SESSION['User'])) {
 					<br>
 
 					<button type="submit">Ändern</button>
-					<a href="home.php" class="ca">Home</a>
 				</form>
 			</div>
 		</section>

@@ -4,12 +4,12 @@
 
 <head>
   <title> Login </title>
-  <link rel="stylesheet" type="text/css" href="../static/login.css?v=<?= time(); ?>">
+  <link rel="stylesheet" type="text/css" href="../static/css/login.css?v=<?= time(); ?>">
 </head>
 
 <body>
 
-  <form action="../login.php" method="post"><!--uses login.php-->
+  <form action="../php/login.php" method="post"><!--uses login.php-->
     <h2>LOGIN</h2>
     <!--shows errors-->
     <?php if (isset($_GET['error'])) { ?>

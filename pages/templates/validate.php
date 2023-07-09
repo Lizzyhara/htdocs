@@ -4,11 +4,11 @@
 
 <head>
     <title>Validates mail first step</title>
-    <link rel="stylesheet" type="text/css" href="../static/login.css?v=<?= time(); ?>">
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css?v=<?= time(); ?>">
 </head>
 
 <body>
-    <form action="../validate_mail.php" method="post"><!--uses validate_mail.php-->
+    <form action="../php/validate_mail.php" method="post"><!--uses validate_mail.php-->
         <h2>Gebe deine Mail ein und bestätige deine Mail</h2>
         <!--shows errors-->
         <?php if (isset($_GET['error'])) { ?>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 //checks entered information
-include "db/db_conn.php";
+include "../../db/db_conn.php";
 if (isset($_POST['uname']) && isset($_POST['password'])) {
   function validate($data)
   {
@@ -17,10 +17,10 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
   $pass = md5($pass); //encryption
   //check if all inputs are filled
   if (empty($uname)) {
-    header("Location: templates/index.php?error=Benutzername muss eingegeben werden");
+    header("Location: ../templates/index.php?error=Benutzername muss eingegeben werden");
     exit();
   } else if (empty($pass)) {
-    header("Location: templates/index.php?error=Passwort muss eingegeben werden");
+    header("Location: ../templates/index.php?error=Passwort muss eingegeben werden");
     exit();
   } else {
     //userinformation is checked
@@ -30,26 +30,26 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
       $row = mysqli_fetch_assoc($result);
       if ($row['User'] === $uname && $row['Password'] === $pass) { //doublechecks information
         if ($row['Val'] != 1) { //checks if mail is valid
-          header("Location: templates/index.php?error=Sie müssen ihre Email noch validieren");
+          header("Location: ../templates/index.php?error=Sie müssen ihre Email noch validieren");
           exit();
         }
         $_SESSION['User'] = $row['User'];
         $_SESSION['ID'] = $row['ID'];
         $_SESSION['Name'] = $row['Name'];
         $_SESSION['Email'] = $row['Name'];
-        header("Location: templates/home.php");
+        header("Location: ../templates/home.php");
         exit();
       } else {
-        header("Location: templates/index.php?error=Sie haben einen falschen Benutzernamen oder ein falsches Passwort eingegeben $pass");
+        header("Location: ../templates/index.php?error=Sie haben einen falschen Benutzernamen oder ein falsches Passwort eingegeben $pass");
         exit();
       }
 
     } else {
-      header("Location: templates/index.php?error=Sie haben einen falschen Benutzernamen oder ein falsches Passwort eingegeben.");
+      header("Location: ../templates/index.php?error=Sie haben einen falschen Benutzernamen oder ein falsches Passwort eingegeben.");
       exit();
     }
   }
 } else {
-  header("Location: templates/index.php");
+  header("Location: ../templates/index.php");
   exit();
 }

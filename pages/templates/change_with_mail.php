@@ -4,11 +4,11 @@
 
 <head>
   <title> Reset password with mail </title>
-  <link rel="stylesheet" type="text/css" href="../static/login.css?v=<?= time(); ?>">
+  <link rel="stylesheet" type="text/css" href="../static/css/login.css?v=<?= time(); ?>">
 </head>
 
 <body>
-  <form action="../chang_w_mail.php" method="post"><!--uses chang_w_mail.php-->
+  <form action="../php/chang_w_mail.php" method="post"><!--uses chang_w_mail.php-->
     <h2>Passwort ändern</h2>
     <input type="hidden" name="token" value="<?php if (isset($_GET['token'])) { //displays -> hides token
         echo $_GET['token'];

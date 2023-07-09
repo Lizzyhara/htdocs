@@ -4,11 +4,11 @@
 
 <head>
   <title> Sign up </title>
-  <link rel="stylesheet" type="text/css" href="../static/login.css?v=<?= time(); ?>">
+  <link rel="stylesheet" type="text/css" href="../static/css/login.css?v=<?= time(); ?>">
 </head>
 
 <body>
-  <form action="../signup_check.php" method="post">
+  <form action="../php/signup_check.php" method="post">
     <h2>REGISTRIERUNG</h2>
     <!--shows errors-->
     <?php if (isset($_GET['error'])) { ?>

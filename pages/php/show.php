@@ -1,5 +1,5 @@
 <?php
-include 'db/db_conn.php';
+include '../../db/db_conn.php';
 if (isset($_SESSION['ID'])) {
     $uid = $_SESSION['ID'];
 } else {
@@ -12,7 +12,7 @@ if (isset($_GET['del_result'])) { //get input
     $id = $_GET['del_result'];
     $sql = "DELETE FROM todo WHERE UserID=$uid AND ID=$id";
     $result = mysqli_query($conn, $sql);
-    header('location: templates/todo.php');
+    header('location: ../templates/todo.php');
 }
 $result = mysqli_query($conn, $sql);
 
@@ -27,7 +27,7 @@ if (mysqli_num_rows($result) > 0) { //if there todo are entriess in the database
         <li id="toDoBox">
             <div>
                 <p><textarea id="<?php echo $row['ID']; ?>" onload="resize(this)"><?php echo $row['Text']; ?> </textarea><a
-                        href="../show.php?del_result=<?php echo $row['ID']; ?>" id="del_btn">Delete</a></p>
+                        href="../php/show.php?del_result=<?php echo $row['ID']; ?>" id="del_btn">Delete</a></p>
             </div>
         </li>
 

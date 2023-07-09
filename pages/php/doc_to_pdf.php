@@ -16,7 +16,7 @@
     $apiKey = "liz@wellhausen.com_3221807834acdc37cef82ac44f451af97a01c0ed34d9a2b61049388a5df60d5b340f5d10"; // The authentication key (API Key). Get your own by registering at https://app.pdf.co
     //Checks if file is uploaded
     if (empty($_FILES["file"]["tmp_name"])) {
-        header("Location: templates/to_pdf.php?error=Keine Datei hochgeladen");
+        header("Location: ../templates/to_pdf.php?error=Keine Datei hochgeladen");
         exit();
     }
     // 1. RETRIEVE THE PRESIGNED URL TO UPLOAD THE FILE.
@@ -70,29 +70,29 @@
                         DocToPdf($apiKey, $uploadedFileUrl, '');
                     } else {
                         // Display request error
-                        header("Location: templates/to_pdf.php?error= $status_code");
+                        header("Location: ../templates/to_pdf.php?error= $status_code");
                         exit();
                     }
                 } else {
                     // Display CURL error
-                    header("Location: templates/to_pdf.php?error=" . curl_error($curl));
+                    header("Location: ../templates/to_pdf.php?error=" . curl_error($curl));
                     exit();
                 }
             } else {
                 // Display service reported error
-                header("Location: templates/to_pdf.php?error=" . $json["message"]);
+                header("Location: ../templates/to_pdf.php?error=" . $json["message"]);
                 exit();
             }
         } else {
             // Display request error
     
-            header("Location: templates/to_pdf.php?error= $status_code");
+            header("Location: ../templates/to_pdf.php?error= $status_code");
             exit();
         }
 
         curl_close($curl);
     } else {
-        header("Location: templates/to_pdf.php?error=" . curl_error($curl));
+        header("Location: ../templates/to_pdf.php?error=" . curl_error($curl));
         exit();
         // Display CURL error
     }
@@ -137,17 +137,17 @@
                     readfile($resultFileUrl);
                 } else {
                     // Display service reported error
-                    header("Location: templates/to_pdf.php?error=" . $json["message"]);
+                    header("Location: ../templates/to_pdf.php?error=" . $json["message"]);
                     exit();
                 }
             } else {
                 // Display request error
-                header("Location: templates/to_pdf.php?error=" . $status_code);
+                header("Location: ../templates/to_pdf.php?error=" . $status_code);
                 exit();
             }
         } else {
             // Display CURL error
-            header("Location: templates/to_pdf.php?error=" . curl_error($curl));
+            header("Location: ../templates/to_pdf.php?error=" . curl_error($curl));
             exit();
         }
 

@@ -3,7 +3,7 @@ session_start();
 //changes password when user is logged in
 if (isset($_SESSION['User'])) {
 
-	include "db/db_conn.php";
+	include "../../db/db_conn.php";
 	//checks if both inputs are filled
 	if (
 		isset($_POST['np'])
@@ -25,10 +25,10 @@ if (isset($_SESSION['User'])) {
 		//nach leeren Feldern geschaut
 
 		if (empty($np)) {
-			header("Location: templates/change_password.php?error=Das neue Passwort muss eingetragen werden");
+			header("Location: ../templates/change_password.php?error=Das neue Passwort muss eingetragen werden");
 			exit();
 		} else if ($np !== $c_np) {
-			header("Location: templates/change_password.php?error=Die Passwörter müssen gleich sein");
+			header("Location: ../templates/change_password.php?error=Die Passwörter müssen gleich sein");
 			exit();
 		} else {
 			// md5 hashfunction encryption
@@ -46,21 +46,21 @@ if (isset($_SESSION['User'])) {
         	          SET Password='$np'
         	          WHERE ID='$id'";
 				mysqli_query($conn, $sql_2);
-				header("Location: templates/change_password.php?success=Dein Passwort wurde erfolgreich geändert");
+				header("Location: ../templates/change_password.php?success=Dein Passwort wurde erfolgreich geändert");
 				exit();
 
 			} else {
-				header("Location: templates/change_password.php?error=Falsches Passwort");
+				header("Location: ../templates/change_password.php?error=Falsches Passwort");
 				exit();
 			}
 
 		}
 	} else {
-		header("Location: templates/change_password.php");
+		header("Location: ../templates/change_password.php");
 		exit();
 	}
 
 } else {
-	header("Location: templates/index.php");
+	header("Location: ../templates/index.php");
 	exit();
 }

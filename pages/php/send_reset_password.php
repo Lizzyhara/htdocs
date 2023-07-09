@@ -1,17 +1,17 @@
 <?php
 //sends mail to reset password
 session_start();
-include 'db/db_conn.php';
+include '../../db/db_conn.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
-require 'vendor/autoload.php';
-require 'vendor/PHPMailer/PHPMailer/src/Exception.php';
-require 'vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
-require 'vendor/PHPMailer/PHPMailer/src/SMTP.php';
+require '../../vendor/autoload.php';
+require '../../vendor/PHPMailer/PHPMailer/src/Exception.php';
+require '../../vendor/PHPMailer/PHPMailer/src/PHPMailer.php';
+require '../../vendor/PHPMailer/PHPMailer/src/SMTP.php';
 
 if (isset($_POST['mail'])) {
 
@@ -49,7 +49,7 @@ if (isset($_POST['mail'])) {
         $mailer->isHTML(true);
         $mailer->Body = "<h1>Hey,<h1>
                         <p>hier ist der Link zum Zurücksetzen deines Passworts.</p></br>
-                        <a href='localhost/templates/change_with_mail.php?token=$token&email=$email'>Hier klicken</a>"; //mail text
+                        <a href='localhost/pages/templates/change_with_mail.php?token=$token&email=$email'>Hier klicken</a>"; //mail text
         $mailer->SMTPAuth = true; // enable SMTP authentication
         $mailer->SMTPSecure = $secure; // sets the prefix to the servier
         $mailer->Host = $host; // sets GMAIL as the SMTP server
@@ -57,22 +57,22 @@ if (isset($_POST['mail'])) {
         $mailer->Username = $username; // GMAIL username
         $mailer->Password = $password; // GMAIL password
         $result = $mailer->Send();
-        echo header("Location: templates/reset_password.php");
+        echo header("Location: ../templates/index.php?success=Die Mail wurde versandt");
         exit();
       } catch (Exception $e) {
-        echo header("Location: templates/reset_password.php?error=Email konnte nicht gesendet werden");
+        echo header("Location: ../templates/reset_password.php?error=Email konnte nicht gesendet werden");
         exit();
       }
     } else {
-      echo header("Location: templates/reset_password.php?error=Etwas ist schief gelaufen");
+      echo header("Location: ../templates/reset_password.php?error=Etwas ist schief gelaufen");
       exit();
     }
   } else {
-    echo header("Location: templates/reset_password.php?error=Email wurde nicht gefunden");
+    echo header("Location: ../templates/reset_password.php?error=Email wurde nicht gefunden");
     exit();
   }
 
 } else {
-  echo header("Location: templates/reset_password.php?error=Email muss angegeben werden");
+  echo header("Location: ../templates/reset_password.php?error=Email muss angegeben werden");
   exit();
 }
