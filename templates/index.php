@@ -17,7 +17,7 @@
         <?php echo $_GET['error']; ?>
       </p>
     <?php } ?>
-     <!--shows success-->
+    <!--shows success-->
     <?php if (isset($_GET['success'])) { ?>
       <p class="success">
         <?php echo $_GET['success']; ?>

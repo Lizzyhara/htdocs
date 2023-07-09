@@ -58,7 +58,6 @@ if (isset($_SESSION['User'])) {
 	</body>
 
 	</html>
-
 	<?php
 } else {
 	header("Location: index.php");

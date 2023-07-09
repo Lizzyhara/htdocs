@@ -30,7 +30,6 @@
     <button type="submit" name="password_reset_link">Passwort ändern</button>
     <a href="index.php" class="ca">Login</a>
   </form>
-
 </body>
 
 </html>

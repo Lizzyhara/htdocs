@@ -29,7 +29,7 @@ if (isset($_POST['mail'])) {
     $update_token = "UPDATE login SET token = '$token' WHERE email = '$get_email' LIMIT 1";
     $update_token_run = mysqli_query($conn, $update_token);
     if ($update_token_run) {
-
+      
       $host = "smtp.gmail.com";
       $port = 587;
       $secure = "tls";

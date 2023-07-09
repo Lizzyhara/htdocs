@@ -15,7 +15,7 @@
     // Get submitted form data
     $apiKey = "liz@wellhausen.com_3221807834acdc37cef82ac44f451af97a01c0ed34d9a2b61049388a5df60d5b340f5d10"; // The authentication key (API Key). Get your own by registering at https://app.pdf.co
     //Checks if file is uploaded
-    if(empty($_FILES["file"]["tmp_name"])){
+    if (empty($_FILES["file"]["tmp_name"])) {
         header("Location: templates/to_pdf.php?error=Keine Datei hochgeladen");
         exit();
     }
