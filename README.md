@@ -21,9 +21,9 @@ Benötigte Installationen:
 
 -PHP Mailer: der PHP Mailer kann über den Composer installiert werden, Version 6.8.0 wird verwendet. Zur Hilfe: https://de.wikihow.com/PHP-Mailer-installieren
 
--XAMPP: XAMPP muss installiert sein und das Projekt in den htdocs Folder geschrieben werden.(In testumgebung unter C:\\xampp\\htdocs
+-XAMPP: XAMPP muss installiert sein und das Projekt in den htdocs Folder geschrieben werden.(In Testumgebung wurde dies unter C:\\xampp\\htdocs)
 
-  -phpMyAdmin: In phpMyAdmin muss eine Datenbank names kegelsite5 erstellt worden sein. Diese besitzt zwei Tabellen
+  -phpMyAdmin: In phpMyAdmin muss eine Datenbank names littlehelperdb erstellt worden sein. Diese besitzt zwei Tabellen
     -login
     ![image](https://github.com/DHBW-Vilas/21ai1-webeng-II-verein-pdf/assets/73017201/b950bf7d-5e59-493e-bd30-c482bd7ad1c9)
     -todo
