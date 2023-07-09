@@ -6,7 +6,7 @@
   border-radius: 5px;
   margin-bottom: 3%;
   border-style: dotted;
-  background: url('../img/icon_3_file_upload-removebg-preview.png'), rgb(245, 245, 245);
+  background: url('../img/file_upload.png'), rgb(245, 245, 245);
   height: 55vh;
   float: center;
   border-color: #838383;
@@ -34,16 +34,6 @@
   margin: 2% 2%;
   cursor: pointer;
   float: right;
-}
-
-.error {
-  background: rgb(229, 175, 175);
-  padding: 10px;
-  width: 95%;
-  border-radius: 5px;
-  margin: 20px auto;
-  border: solid;
-  border-color: #eb6778;
 }
 
 .input_box.is-dragover {

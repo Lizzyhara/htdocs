@@ -13,7 +13,7 @@
     <input type="hidden" name="token" value="<?php if (isset($_GET['token'])) { //displays -> hides token
         echo $_GET['token'];
       } ?>" /><br>
-    <!--checks for errors-->
+    <!--shows errors-->
     <?php if (isset($_GET['error'])) { ?>
       <p class="error">
         <?php echo $_GET['error']; ?>

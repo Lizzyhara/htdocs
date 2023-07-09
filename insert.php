@@ -1,7 +1,7 @@
 <?php
 session_start();
 //adds todo to database
-include 'db_conn.php';
+include 'db/db_conn.php';
 if (!empty($_POST['txt'])) { //checks if input is filled
     if (isset($_POST['txt'])) {
         function validate($data)
@@ -25,6 +25,6 @@ if (!empty($_POST['txt'])) { //checks if input is filled
         echo "Error";
     }
 } else {
-    header("Location: templates/todo.php?Bitte Text einfügen");
+    header("Location: templates/todo.php?error=Bitte Text einfügen");
 }
 ?>

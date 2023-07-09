@@ -32,13 +32,17 @@
                             <?php echo $_GET['error']; ?>
                         </p>
                     <?php } ?>
-                    <!--get your own api key at https://apidocs.pdf.co">https://apidocs.pdf.co-->
+                    <?php if (isset($_GET['success'])) { ?>
+                        <p class="success">
+                            <?php echo $_GET['success']; ?>
+                        </p>
+                    <?php } ?>
+                    <!--get your own api key at https://apidocs.pdf.co-->
                     <input type="hidden" id="api_key_input" name="apiKey" placeholder="API Key" />
                     </p>
                     <!--file upload box-->
                     <div class="input_box">
                         <div class="input_box_pmt">Eine Datei ziehen und fallen lassen oder drücken zum Hochladen</div>
-
                         <input type="hidden" name="MAX_FILE_SIZE" value="8000000" />
                         <input type="file" name="file" class="input_file" hidden>
                     </div>

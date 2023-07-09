@@ -38,14 +38,6 @@ button:hover {
   opacity: .7;
 }
 
-.success {
-  background: rgb(66, 201, 106);
-  color: #07813a;
-  padding: 10px;
-  width: 95%;
-  border-radius: 5px;
-  margin: 20px auto;
-}
 
 .playgif {
   background-image: url('../img/hard_working.gif');

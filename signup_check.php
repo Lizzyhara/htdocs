@@ -1,7 +1,7 @@
 <?php
 session_start();
 //checks the information entered during registration
-include "db_conn.php";
+include "db/db_conn.php";
 if (isset($_POST['uname']) && isset($_POST['password']) && isset($_POST['name']) && isset($_POST['re_password']) && isset($_POST['mail'])) {
   function validate($data)
   {

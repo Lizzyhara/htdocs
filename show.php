@@ -1,5 +1,5 @@
 <?php
-include 'db_conn.php';
+include 'db/db_conn.php';
 if (isset($_SESSION['ID'])) {
     $uid = $_SESSION['ID'];
 } else {

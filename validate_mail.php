@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db_conn.php';
+include 'db/db_conn.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;

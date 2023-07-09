@@ -45,7 +45,7 @@ if (
 						<p>Diese Seite soll dir bei Altagsproblemen zur Seite stehen. Du kannst hier sowohl aufschreiben was
 							du noch zu erledigen hast, als auch ein .docxs Dokument in ein PDF umzuwandeln.</p>
 					</div>
-					<img src="../img/x-to-pdf.png" id="img-left">
+					<img src="../img/x_to_pdf.png" id="img-left">
 					<p></p>
 					<div id="left_side">
 						<h3>PDF Konverter</h3>

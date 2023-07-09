@@ -4,7 +4,7 @@ $sname = "localhost";
 $unmae = "root";
 $password = "";
 
-$db_name = "kegelsite5";
+$db_name = "littlehelperdb";
 
 $conn = mysqli_connect($sname, $unmae, $password, $db_name);
 

@@ -28,7 +28,7 @@ if (isset($_SESSION['User'])) {
 				</nav>
 			</div>
 			<div class="center">
-				<form action="change_p.php" method="post"><!--uses change_p.php-->
+				<form action="..\change_p.php" method="post"><!--uses change_p.php-->
 					<h2>Passwort ändern</h2><!--displays errors-->
 					<?php if (isset($_GET['error'])) { ?>
 						<p class="error">

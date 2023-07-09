@@ -82,16 +82,6 @@ nav {
   font-family: 'Poppins', sans-serif;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky+.content {
-  padding-top: 102px;
-}
-
 .outer_box {
   margin-top: 2%;
   position: relative;
@@ -109,4 +99,23 @@ nav {
 #allign {
   width: 90%;
   text-align: center;
+}
+
+.error {
+  background: rgb(229, 175, 175);
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
+  border: solid;
+  border-color: #eb6778;
+}
+
+.success {
+  background: rgb(66, 201, 106);
+  color: #07813a;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
 }

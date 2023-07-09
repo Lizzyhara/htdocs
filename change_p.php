@@ -3,7 +3,7 @@ session_start();
 //changes password when user is logged in
 if (isset($_SESSION['User'])) {
 
-	include "db_conn.php";
+	include "db/db_conn.php";
 	//checks if both inputs are filled
 	if (
 		isset($_POST['np'])
@@ -28,7 +28,7 @@ if (isset($_SESSION['User'])) {
 			header("Location: templates/change_password.php?error=Das neue Passwort muss eingetragen werden");
 			exit();
 		} else if ($np !== $c_np) {
-			header("Location: templates/change_password.php?error=Das neue Passwort muss bestätigt werden");
+			header("Location: templates/change_password.php?error=Die Passwörter müssen gleich sein");
 			exit();
 		} else {
 			// md5 hashfunction encryption

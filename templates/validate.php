@@ -11,7 +11,7 @@
 
     <form action="../validate_mail.php" method="post"><!--uses validate_mail.php-->
         <h2>Gebe deine Mail ein und bestätige deine Mail</h2>
-        <!--checks for errors-->
+        <!--shows errors-->
         <?php if (isset($_GET['error'])) { ?>
             <p class="error">
                 <?php echo $_GET['error']; ?>

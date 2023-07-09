@@ -35,6 +35,11 @@ if (
         <div class="outer_box">
           <form action="../insert.php" method="post"><!--uses insert.php-->
             <h1>ToDo-Liste</h1>
+            <?php if (isset($_GET['error'])) { ?>
+                        <p class="error">
+                            <?php echo $_GET['error']; ?>
+                        </p>
+                    <?php } ?>
             </br>
             <fieldset>
               <input type="text" maxlength="70" id="txt" name="txt"

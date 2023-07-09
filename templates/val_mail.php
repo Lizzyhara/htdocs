@@ -7,13 +7,13 @@
     <link rel="stylesheet" type="text/css" href="../static/login.css?v=<?= time(); ?>">
 </head>
 
-<body onload="document.form1.submit()">
+<body>
 
     <form action="../end_val_mail.php" method="post"><!--uses end_val_mail-->
         <input type="hidden" name="token" value="<?php if (isset($_GET['token'])) { //displays, hides token for php useage
                 echo $_GET['token'];
             } ?>" /><br>
-        <!--checks for errors-->
+        <!--shows errors-->
         <?php if (isset($_GET['error'])) { ?>
             <p class="error">
                 <?php echo $_GET['error']; ?>

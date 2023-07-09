@@ -1,7 +1,7 @@
 <?php
 session_start();
 //checks entered information
-include "db_conn.php";
+include "db/db_conn.php";
 if (isset($_POST['uname']) && isset($_POST['password'])) {
   function validate($data)
   {

@@ -9,9 +9,9 @@
 
 <body>
 
-  <form action="../reset-password.php" method="post"><!--uses reset-password.php-->
+  <form action="../send_reset_password.php" method="post"><!--uses send_reset_password.php-->
     <h2>Passwort zurücksetzen</h2>
-    <!--checks for errors-->
+    <!--shows errors-->
     <?php if (isset($_GET['error'])) { ?>
       <p class="error">
         <?php echo $_GET['error']; ?>

@@ -10,13 +10,13 @@
 <body>
   <form action="../signup_check.php" method="post">
     <h2>REGISTRIERUNG</h2>
-    <!--checks for errors-->
+    <!--shows errors-->
     <?php if (isset($_GET['error'])) { ?>
       <p class="error">
         <?php echo $_GET['error']; ?>
       </p>
     <?php } ?>
-    <!--checks for success-->
+    <!--shows success-->
     <?php if (isset($_GET['success'])) { ?>
       <p class="success">
         <?php echo $_GET['success']; ?>

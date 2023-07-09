@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db_conn.php';
+include 'db/db_conn.php';
 //sets mail to valid
 if (!empty($_POST['email'])) { //checks if input is filled
     $email = mysqli_real_escape_string($conn, $_POST['email']); //create a legal SQL string

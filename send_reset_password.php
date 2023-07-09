@@ -1,7 +1,7 @@
 <?php
 //sends mail to reset password
 session_start();
-include 'db_conn.php';
+include 'db/db_conn.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -48,7 +48,7 @@ if (isset($_POST['mail'])) {
         $mailer->Subject = "Subject ";
         $mailer->isHTML(true);
         $mailer->Body = "<h1>Hey,<h1>
-                        <p>hier ist der Link zum zurücksetzen deines Passworts.</p></br>
+                        <p>hier ist der Link zum Zurücksetzen deines Passworts.</p></br>
                         <a href='localhost/templates/change_with_mail.php?token=$token&email=$email'>Hier klicken</a>"; //mail text
         $mailer->SMTPAuth = true; // enable SMTP authentication
         $mailer->SMTPSecure = $secure; // sets the prefix to the servier
